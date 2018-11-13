@@ -14,8 +14,8 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/getBooks', 'BookController@index');
-Route::post('/insertBook', 'BookController@insert');
-Route::post('/uploadImage', 'ImageUploadController@upload');
+//Route::post('/insertBook', 'BookController@insert');
+//Route::post('/uploadImage', 'ImageUploadController@upload');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

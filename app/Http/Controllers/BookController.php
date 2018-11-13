@@ -12,8 +12,6 @@ class BookController extends Controller
 
         $book = Book::all();
 
-        dd($book);
-
         return response()->json([
             'code' => 200,
             'message' => 'Book Lists Successfully.',
@@ -22,19 +20,19 @@ class BookController extends Controller
 
     }
 
-    public function insert(Request $request) {
-
-        $book = new Book();
-        $book->title = $request->input('title');
-        $book->desc = $request->input('desc');
-        $book->image_url = $request->input('image_url');
-        $book->save();
-
-        return response()->json([
-           'code' => 200,
-           'message' => 'insert successfully.'
-        ]);
-
-    }
+//    public function insert(Request $request) {
+//
+//        $book = new Book();
+//        $book->title = $request->input('title');
+//        $book->desc = $request->input('desc');
+//        $book->image_url = $request->input('image_url');
+//        $book->save();
+//
+//        return response()->json([
+//           'code' => 200,
+//           'message' => 'insert successfully.'
+//        ]);
+//
+//    }
 
 }
