@@ -12,6 +12,8 @@ class BookController extends Controller
 
         $book = Book::all();
 
+        dd($book);
+
         return response()->json([
             'code' => 200,
             'message' => 'Book Lists Successfully.',
